@@ -1,9 +1,10 @@
 import Button from "react-bootstrap/Button";
+import "./Button.css";
 
-const ButtonComponent = ({ onClick }) => {
+const ButtonComponent = ({ onClick, isStart }) => {
   return (
-    <Button variant="primary" onClick={onClick}>
-      Primary
+    <Button className="discoButton" onClick={onClick}>
+      {!isStart ? "Start Disco" : "Stop Disco"}
     </Button>
   );
 };

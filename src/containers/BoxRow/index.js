@@ -16,9 +16,9 @@ const BoxRow = ({ isStart }) => {
   };
 
   useEffect(() => {
-    console.log(isStart);
     let autoDisco;
     if (isStart) {
+      getRandomColor();
       autoDisco = setInterval(() => {
         getRandomColor();
       }, 2000);

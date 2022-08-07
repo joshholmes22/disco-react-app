@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import Box from "./components/Box";
+import { useState } from "react";
 import Button from "./components/Button";
 import BoxRow from "./containers/BoxRow";
+import "./App.css";
 
 const App = () => {
   const [isStart, setIsStart] = useState(false);
@@ -14,19 +14,15 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    setIsStart(false);
-  }, []);
-
   return (
-    <div>
-      <div>
+    <div className="center">
+      <div className="center">
         <BoxRow isStart={isStart} />
         <BoxRow isStart={isStart} />
         <BoxRow isStart={isStart} />
         <BoxRow isStart={isStart} />
       </div>
-      <Button onClick={toggleDisco} />
+      <Button onClick={toggleDisco} isStart={isStart} />
     </div>
   );
 };
