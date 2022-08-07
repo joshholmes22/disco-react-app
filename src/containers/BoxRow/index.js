@@ -15,13 +15,22 @@ const BoxRow = ({ isStart }) => {
     setColor4("#" + Math.floor(Math.random() * 16777215).toString(16));
   };
 
+  const resetColors = () => {
+    setColor1("black");
+    setColor2("black");
+    setColor3("black");
+    setColor4("black");
+  };
+
   useEffect(() => {
     let autoDisco;
     if (isStart) {
       getRandomColor();
       autoDisco = setInterval(() => {
         getRandomColor();
-      }, 2000);
+      }, 510);
+    } else {
+      resetColors();
     }
     return () => clearInterval(autoDisco);
   }, [isStart]);

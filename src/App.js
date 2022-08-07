@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./components/Button";
 import BoxRow from "./containers/BoxRow";
 import "./App.css";
+import audioFile from "./assets/audio/disco-music.mp3";
 
 const App = () => {
   const [isStart, setIsStart] = useState(false);
+  const [background, setBackground] = useState("white");
 
   const toggleDisco = () => {
     if (!isStart) {
@@ -14,9 +16,26 @@ const App = () => {
     }
   };
 
+  const toggleAudio = () => {
+    let sound = new Audio(audioFile);
+
+    isStart ? sound.play() : sound.pause();
+  };
+
+  useEffect(() => {
+    if (isStart) {
+      setBackground("black");
+      toggleAudio();
+    } else {
+      setBackground("white");
+      toggleAudio();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isStart]);
+
   return (
-    <div className="center">
-      <div className="center">
+    <div className="center" style={{ backgroundColor: background }}>
+      <div>
         <BoxRow isStart={isStart} />
         <BoxRow isStart={isStart} />
         <BoxRow isStart={isStart} />
