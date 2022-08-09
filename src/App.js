@@ -7,6 +7,7 @@ import audioFile from "./assets/audio/disco-music.mp3";
 const App = () => {
   const [isStart, setIsStart] = useState(false);
   const [background, setBackground] = useState("white");
+  const [sound, setAudio] = useState(new Audio(audioFile));
 
   const toggleDisco = () => {
     if (!isStart) {
@@ -17,8 +18,6 @@ const App = () => {
   };
 
   const toggleAudio = () => {
-    let sound = new Audio(audioFile);
-
     isStart ? sound.play() : sound.pause();
   };
 
