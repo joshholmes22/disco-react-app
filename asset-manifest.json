@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/disco-react-app/static/css/main.e2a4434b.css",
-    "main.js": "/disco-react-app/static/js/main.2f8a6fd6.js",
+    "main.js": "/disco-react-app/static/js/main.545a2402.js",
     "static/media/disco-music.mp3": "/disco-react-app/static/media/disco-music.34ee1e9675e8c12a5e2c.mp3",
     "index.html": "/disco-react-app/index.html",
     "main.e2a4434b.css.map": "/disco-react-app/static/css/main.e2a4434b.css.map",
-    "main.2f8a6fd6.js.map": "/disco-react-app/static/js/main.2f8a6fd6.js.map"
+    "main.545a2402.js.map": "/disco-react-app/static/js/main.545a2402.js.map"
   },
   "entrypoints": [
     "static/css/main.e2a4434b.css",
-    "static/js/main.2f8a6fd6.js"
+    "static/js/main.545a2402.js"
   ]
 }
