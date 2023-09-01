@@ -2,7 +2,7 @@
 
 A simple React application which toggles audio and color changing boxes for a disco display
 
-Click [Here](https://glowingmanagement.github.io/disco-react-app/) to view the application
+Click [Here](https://joshholmes22.github.io/disco-react-app/) to view the application
 
 ## Screenshots
 
